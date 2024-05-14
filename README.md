@@ -66,7 +66,7 @@ the images and then two adversarial discriminators, DM
 and DG. The discriminators attempt to distinguish
 between the real and generated images.
 
-![alt text](images/cycle_gam.jpg "cycleGAN")
+![alt text](images/cycle_gam.png "cycleGAN")
 
 Our implementation takes movie and game images as
 inputs using a custom data loader. These images are
@@ -107,8 +107,8 @@ increasing the number of images we ran through the
 cosine similarity function would help to improve these
 further.
 
-![alt text](images/game_to_movie2.jpg)
-![alt text](images/movie_to_game2.jpg)
+![alt text](images/game_to_movie2.png)
+![alt text](images/movie_to_game2.png)
 
 
 

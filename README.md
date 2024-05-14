@@ -1,3 +1,7 @@
+~~~
+This work was performed using Python 3, hosted on Google Colab using the V100 GPU for processing.
+~~~
+
 ## Human Patch Extraction
 This is a semantic segmentation problem. We use the
 pre-trained Mask-RCNN model “COCO” to detect

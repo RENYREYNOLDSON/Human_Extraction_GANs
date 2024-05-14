@@ -54,6 +54,8 @@ to belong to the same classification group. Overall,
 this method performed incredibly well on pairing the
 images.
 
+![alt text](images/similarities.jpg "Example Pairs")
+
 ## cycleGAN
 In this work we used a cycleGAN as the unpaired
 image-image network. The goal of the cycleGAN is to

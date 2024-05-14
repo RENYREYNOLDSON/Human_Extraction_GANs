@@ -50,6 +50,50 @@ to belong to the same classification group. Overall,
 this method performed incredibly well on pairing the
 images.
 
+## cycleGAN
+In this work we used a cycleGAN as the unpaired
+image-image network. The goal of the cycleGAN is to
+learn a mapping between the movie and game domains.
+We use two generators 𝐺1: 𝑀 → 𝐺, 𝐺2: 𝐺 → 𝑀 to create
+the images and then two adversarial discriminators, DM
+and DG. The discriminators attempt to distinguish
+between the real and generated images.
+Our implementation takes movie and game images as
+inputs using a custom data loader. These images are
+split into training and testing data and then transformed
+using the albumentations library. For each image we
+scale to 200x200 pixels, randomly flip, normalize and
+then convert into a torch tensor. We use a smaller tensor
+size in order to reduce training time. Our model can be
+saved and loaded as necessary, so we ran it for as many
+epochs as possible with a batch size of 32 images.
+The model was trained for around 6 hours, and clearly it
+requires more training. Our results with this method yield okay results and
+features can be made, however the generator seems to
+be outputting very low brightness images. This could be
+because the provided videos are generally dark, but it
+makes them difficult to analyse.
+
+## pix2pix patchGAN 
+We implemented a paired image-image
+network ‘pix2pix’. It is a form of conditional GAN
+based on U-net and a PatchGAN discriminator and
+contains skip connections from encoder network
+activations to decoder network output. 
+For this task the paired images were scaled to
+64x64 as I was strapped for time and wanted to train the
+model quickly. This model is a big improvement over
+the cycleGAN, it had a faster learning rate and overall
+better results on the validation datasets.
+Overall, we have observed that using paired images and
+a conditional GAN yields much better results than just
+using a cycleGAN. The well paired images really
+helped with the detail in the images and accuracy of the
+translations. Running this model for longer and
+increasing the number of images we ran through the
+cosine similarity function would help to improve these
+further.
+
 
 
 

@@ -66,7 +66,7 @@ the images and then two adversarial discriminators, DM
 and DG. The discriminators attempt to distinguish
 between the real and generated images.
 
-![alt text](images/cycle_gam.png "cycleGAN")
+![alt text](images/cycle_gan.jpg "cycleGAN")
 
 Our implementation takes movie and game images as
 inputs using a custom data loader. These images are
